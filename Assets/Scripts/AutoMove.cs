@@ -8,20 +8,31 @@ public class AutoMove : MonoBehaviour
     public int speed;
     public int direction;
 
-    public float horizontalMove = 0f;
-    public float verticalMove = 20f;
+    Rigidbody2D rb;
 
-    public bool jump;
+    public float horizontalMove = 0f;
+    public float jumpForce = 20f;
+    [SerializeField]
+    private float jumpTimer;
+    [SerializeField]
+    private float jumpTime;
+
+    public bool isGrounded;
+    public bool isJumping;
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask isGround;
 
     // Start is called before the first frame update
     void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         speed = 5;
         direction = 1;
-        jump = false;
+
     }
 
-    // Update is called once per frame
+    // Update is called once per frame USE FOR MOVEMENT AND SHIT THAT DONT WANNA BE DEPENDANT OF FRAMES PER SECOND
     void FixedUpdate()
     {
         Movement();
@@ -41,12 +52,37 @@ public class AutoMove : MonoBehaviour
             direction = 1;
         }
 
-
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+        //Jump
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("Jumpy jump");
-            jump = true;
+            isJumping = true;
+            jumpTimer = jumpTime;
+            rb.velocity = Vector2.up * jumpForce;
         }
+
+        //Held Jump
+        if (isGrounded == true && Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) && isJumping == true)
+        {
+            if(jumpTimer > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimer -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+            
+        }
+
+        if(Input.GetKeyUp(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
+        {
+            isJumping = false;
+        }
+
+        //check if player is grounded
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, isGround);
     }
 
     void Movement()
@@ -54,17 +90,9 @@ public class AutoMove : MonoBehaviour
         //Auto movement
         horizontalMove = speed * direction;
         transform.Translate(Vector2.right * horizontalMove * Time.deltaTime);
-
-        //Jump
-        if(jump == true)
-        {
-            transform.Translate(Vector2.up * verticalMove * Time.deltaTime);
-        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
