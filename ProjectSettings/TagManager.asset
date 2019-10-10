@@ -45,3 +45,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Foreground
+    uniqueID: 3101148417
+    locked: 0
+  - name: Door
+    uniqueID: 2119323373
+    locked: 0
+  - name: Player
+    uniqueID: 2492932405
+    locked: 0
