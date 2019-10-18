@@ -8,6 +8,7 @@ TagManager:
   - Wall1
   - playerweapon
   - enemy
+  - LeperTrigger
   layers:
   - Default
   - TransparentFX
