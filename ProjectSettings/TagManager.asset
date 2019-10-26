@@ -9,6 +9,9 @@ TagManager:
   - playerweapon
   - enemy
   - LeperTrigger
+  - enemyLeper
+  - pickable
+  - enemyleper
   layers:
   - Default
   - TransparentFX
