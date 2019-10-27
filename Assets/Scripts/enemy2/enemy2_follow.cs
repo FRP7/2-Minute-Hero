@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy2 : MonoBehaviour
+public class enemy2_follow : MonoBehaviour
 {
     //flip
     Vector3 enemy2Scale;
