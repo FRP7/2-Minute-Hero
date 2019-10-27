@@ -23,6 +23,16 @@ public class AutoMove : MonoBehaviour
     public float checkRadius;
     public LayerMask isGround;
 
+    //flip
+    Vector3 characterScale;
+    float characterScaleX;
+    //
+
+    void Start() {
+        characterScale = transform.localScale;
+        characterScaleX = characterScale.x;
+    }
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -44,13 +54,16 @@ public class AutoMove : MonoBehaviour
         {
             Debug.Log("Beep");
             direction = -1;
+            characterScale.x = -characterScaleX; //flip
         }
 
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             Debug.Log("Boop");
             direction = 1;
+            characterScale.x = characterScaleX; //flip
         }
+        transform.localScale = characterScale; //flip
 
         //Jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
