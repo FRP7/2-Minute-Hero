@@ -29,8 +29,10 @@ public class AutoMove : MonoBehaviour
     //
 
     void Start() {
+        //flip
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
+        //
     }
 
     // Start is called before the first frame update

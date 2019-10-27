@@ -6,6 +6,12 @@ public class enemy1chase : MonoBehaviour
 {
    public float speed;
    public float stoppingDistance;
+
+    //flip
+    Vector3 enemy1Scale;
+    float enemy1ScaleX;
+    public float direction;
+    //
    
    private Transform target;
    
@@ -13,6 +19,11 @@ public class enemy1chase : MonoBehaviour
    {
 	target = GameObject.FindGameObjectWithTag("Player")
 	.GetComponent<Transform>();
+        //flip
+        enemy1Scale = transform.localScale;
+        enemy1ScaleX = enemy1Scale.x;
+        direction = transform.position.x;
+        //
    }
    
    void FixedUpdate()
@@ -27,6 +38,22 @@ public class enemy1chase : MonoBehaviour
      transform.position = pos;
 
 	}
+
+        transform.localScale = enemy1Scale;
+
    }
-   
+
+    void Update() {
+        //flip
+        if (direction > transform.position.x) {
+            Debug.Log("Esta a mover para a esquerda");
+            enemy1Scale.x = enemy1ScaleX;
+        } else if(direction < transform.position.x) {
+            Debug.Log("Esta a mover para a direita");
+            enemy1Scale.x = -enemy1ScaleX;
+        }
+        direction = transform.position.x;
+        //
+    }
+
 }
