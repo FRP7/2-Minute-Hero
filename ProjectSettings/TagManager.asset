@@ -12,6 +12,7 @@ TagManager:
   - enemyLeper
   - pickable
   - enemyleper
+  - Floor
   layers:
   - Default
   - TransparentFX
