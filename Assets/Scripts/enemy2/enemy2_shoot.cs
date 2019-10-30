@@ -7,7 +7,7 @@ public class enemy2_shoot : MonoBehaviour {
     //public Vector2 trigger1;
     public Transform trigger1;
 
-    public GameObject bullet;
+    [SerializeField] GameObject bullet;
     public float speed = 100f;
 
     public float fireRate;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class enemy2_bullet : MonoBehaviour
 {
-    float moveSpeed = 7f;
+    public float moveSpeed = 3f;
 
     Rigidbody2D rb;
 
@@ -18,7 +18,8 @@ public class enemy2_bullet : MonoBehaviour
         target = GameObject.Find("enemy2_trigger");
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-      //  Destroy(gameObject, 3f);
+        Destroy(gameObject, 1f);
+     //   Debug.Log("Destroy");
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class enemy2_bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.name == "Player") {
             Debug.Log("Acertou!");
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

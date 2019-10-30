@@ -34,7 +34,7 @@ public class enemy2chase : MonoBehaviour
 		(transform.position, target.position, speed * Time.deltaTime);
 		
 		Vector2 pos = transform.position;
-     pos.y = 3.67f;
+     pos.y = 5f;
      transform.position = pos;
 
 	}
