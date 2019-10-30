@@ -13,6 +13,7 @@ TagManager:
   - pickable
   - enemyleper
   - Floor
+  - enemy2_trigger
   layers:
   - Default
   - TransparentFX
