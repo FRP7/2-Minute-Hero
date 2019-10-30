@@ -14,6 +14,7 @@ TagManager:
   - enemyleper
   - Floor
   - enemy2_trigger
+  - enemy2_bullet
   layers:
   - Default
   - TransparentFX
