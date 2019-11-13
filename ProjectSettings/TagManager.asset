@@ -15,6 +15,7 @@ TagManager:
   - Floor
   - enemy2_trigger
   - enemy2_bullet
+  - enemy1_trigger
   layers:
   - Default
   - TransparentFX

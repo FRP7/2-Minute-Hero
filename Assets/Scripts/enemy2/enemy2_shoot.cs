@@ -40,7 +40,7 @@ public class enemy2_shoot : MonoBehaviour {
             Instantiate(bullet, transform.position, Quaternion.identity);
             nextFire = Time.time + fireRate;
         }
-
+        //deves meter algures por aqui a animação da arma do robot a disparar
     }
 
 }

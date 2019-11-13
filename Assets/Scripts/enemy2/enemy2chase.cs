@@ -37,7 +37,9 @@ public class enemy2chase : MonoBehaviour
      pos.y = 5f;
      transform.position = pos;
 
-	}
+            //deve ser algures por aqui que deves meter a animação do robot a voar
+
+        }
 
         transform.localScale = enemy1Scale;
 

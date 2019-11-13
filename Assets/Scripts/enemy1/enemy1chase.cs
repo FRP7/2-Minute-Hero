@@ -37,19 +37,19 @@ public class enemy1chase : MonoBehaviour
      pos.y = 0;
      transform.position = pos;
 
-	}
+            //deve ser algures por aqui que deves meter a animação de andar
+        }
 
         transform.localScale = enemy1Scale;
-
    }
 
     void Update() {
         //flip
         if (direction > transform.position.x) {
-            Debug.Log("Esta a mover para a esquerda");
+           // Debug.Log("Esta a mover para a esquerda");
             enemy1Scale.x = enemy1ScaleX;
         } else if(direction < transform.position.x) {
-            Debug.Log("Esta a mover para a direita");
+            //Debug.Log("Esta a mover para a direita");
             enemy1Scale.x = -enemy1ScaleX;
         }
         direction = transform.position.x;

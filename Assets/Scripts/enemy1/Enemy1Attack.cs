@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyWeapon : MonoBehaviour
+public class Enemy1Attack : MonoBehaviour
 {
-    // Start is called before the first frame update
+   // Start is called before the first frame update
     public PlayerHealth playerinstance;
     void Start()
     {

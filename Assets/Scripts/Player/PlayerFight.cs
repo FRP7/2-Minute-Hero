@@ -18,14 +18,14 @@ public class PlayerFight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Enemy: " + enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1);
-        Debug.Log("Enemy: " + enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2);
-        Debug.Log("Enemy: " + enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3);
+      //  Debug.Log("Enemy: " + enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1);
+      //  Debug.Log("Enemy: " + enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2);
+      //  Debug.Log("Enemy: " + enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.name == "enemy1") { 
-            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1--;
+        if (collision.gameObject.name == "enemy1") {
+                enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1--;
     }
      if (collision.gameObject.name == "enemy2") {
             enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2--;

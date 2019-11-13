@@ -21,6 +21,7 @@ public class enemy2_bullet : MonoBehaviour
         target = GameObject.Find("enemy2_trigger");
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
+        //se quiseres meter animação de bala a se destruir deves meter aqui
         Destroy(gameObject, 1f);
      //   Debug.Log("Destroy");
     }
@@ -28,13 +29,14 @@ public class enemy2_bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //se meteres alguma animação na bala (por exemplo, fogo a volta idk) deves meter aqui
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.name == "Player") {
             Debug.Log("Acertou!");
             playerinstance.GetComponent<PlayerHealth>().Healthbar--;
+            //se quiseres meter animação da bala a destruir ao acertar no jogador deves mete aqui
             Destroy(gameObject);
         }
     }

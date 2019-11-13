@@ -54,14 +54,14 @@ public class AutoMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("Beep");
+           // Debug.Log("Beep");
             direction = -1;
             characterScale.x = -characterScaleX; //flip
         }
 
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("Boop");
+          //  Debug.Log("Boop");
             direction = 1;
             characterScale.x = characterScaleX; //flip
         }
@@ -70,10 +70,11 @@ public class AutoMove : MonoBehaviour
         //Jump
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Jumpy jump");
+          //  Debug.Log("Jumpy jump");
             isJumping = true;
             jumpTimer = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            //deve ser por aqui que deves meter a animação de saltar
         }
 
         //Held Jump
@@ -83,6 +84,7 @@ public class AutoMove : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimer -= Time.deltaTime;
+                //deve ser por aqui que deves meter a animação de estar no ar
             }
             else
             {
@@ -105,6 +107,8 @@ public class AutoMove : MonoBehaviour
         //Auto movement
         horizontalMove = speed * direction;
         transform.Translate(Vector2.right * horizontalMove * Time.deltaTime);
+
+        //acho que é por aqui que deves meter a animação de movimento
     }
 
     
