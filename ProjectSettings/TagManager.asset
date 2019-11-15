@@ -16,6 +16,8 @@ TagManager:
   - enemy2_trigger
   - enemy2_bullet
   - enemy1_trigger
+  - playerhealth
+  - enemy1_hitbox
   layers:
   - Default
   - TransparentFX

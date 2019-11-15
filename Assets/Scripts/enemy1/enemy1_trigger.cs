@@ -6,6 +6,7 @@ public class enemy1_trigger : MonoBehaviour
 {
 	//public Animator AnimController;
 	public GameObject DamageZone;
+	public GameObject enemy1_hitbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +25,14 @@ public class enemy1_trigger : MonoBehaviour
 			//Debug.Log("Triga animation");
 			//AnimController.Play("enemy1_example");
 			DamageZone.SetActive(true); 
+			enemy1_hitbox.SetActive(true);
 		} 
 	}
 
     void OnCollisionExit2D(Collision2D other) {
         if (other.gameObject.name == "Player") {
             DamageZone.SetActive(false);
+			enemy1_hitbox.SetActive(false);
           //  Debug.Log("Jogador saiu");
         }
     }

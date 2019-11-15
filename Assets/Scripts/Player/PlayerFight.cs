@@ -34,5 +34,12 @@ public class PlayerFight : MonoBehaviour
             enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3--;
     }
     }
+	
+	private void OnTriggerEnter2D(Collider2D col)
+	{
+		 if (col.gameObject.name == "enemy1_hitbox") {
+            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1--;
+		}
+	}
 
 }

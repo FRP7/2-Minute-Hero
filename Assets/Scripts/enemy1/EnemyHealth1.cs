@@ -15,10 +15,12 @@ public class EnemyHealth1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EnemyHealthbar1 == 0)
+        if(EnemyHealthbar1 <= 0)
         {
             Debug.Log("Enemy dies");
             Destroy(Enemy1);
         }
+		
+		//Debug.Log("Isto está a funcionar?");
     }
 }
