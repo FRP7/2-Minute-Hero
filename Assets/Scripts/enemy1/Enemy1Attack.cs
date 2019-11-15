@@ -21,12 +21,12 @@ public class Enemy1Attack : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag == "Player")
-            playerinstance.GetComponent<PlayerHealth>().Healthbar--;
+            playerinstance.GetComponent<PlayerHealth>().Healthbar-=1;
     }
 	
 	private void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject.tag == "playerhealth")
-            playerinstance.GetComponent<PlayerHealth>().Healthbar--;
+            playerinstance.GetComponent<PlayerHealth>().Healthbar-=1;
 	}
 }

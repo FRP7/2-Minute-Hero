@@ -35,7 +35,7 @@ public class enemy2_bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.gameObject.name == "Player") {
             Debug.Log("Acertou!");
-            playerinstance.GetComponent<PlayerHealth>().Healthbar--;
+            playerinstance.GetComponent<PlayerHealth>().Healthbar-=1;
             //se quiseres meter animação da bala a destruir ao acertar no jogador deves mete aqui
             Destroy(gameObject);
         }

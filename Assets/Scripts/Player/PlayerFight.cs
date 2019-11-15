@@ -25,20 +25,20 @@ public class PlayerFight : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.name == "enemy1") {
-                enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1--;
+                enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1-= 1;
     }
      if (collision.gameObject.name == "enemy2") {
-            enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2--;
+            enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2-=1;
     }
  if (collision.gameObject.name == "enemy3_leper") {
-            enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3--;
+            enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3-=1;
     }
     }
 	
 	private void OnTriggerEnter2D(Collider2D col)
 	{
 		 if (col.gameObject.name == "enemy1_hitbox") {
-            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1--;
+            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1-=1;
 		}
 	}
 
