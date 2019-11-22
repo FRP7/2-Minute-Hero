@@ -8,11 +8,20 @@ public class ThrowableObject : MonoBehaviour
 	public Inventory inventoryinstance;
 	public Rigidbody2D throwablerb;
 	public Transform Player;
+	public GameObject PickableObject;
+	
+	public EnemyHealth1 enemyhealth1instance;
+    public EnemyHealth2 enemyhealth2instance;
+    public EnemyHealth3 enemyhealth3instance;
 	
     // Start is called before the first frame update
     void Start()
     {
         inventoryinstance = GameObject.Find("Player").GetComponent<Inventory>();
+		
+		enemyhealth1instance = GameObject.Find("enemy1").GetComponent<EnemyHealth1>();
+        enemyhealth2instance = GameObject.Find("enemy2").GetComponent<EnemyHealth2>();
+        enemyhealth3instance = GameObject.Find("enemy3_leper").GetComponent<EnemyHealth3>();
     }
 
     // Update is called once per frame
@@ -42,6 +51,29 @@ public class ThrowableObject : MonoBehaviour
 		} else if(Player.localScale.x > 0)
 		{
 			throwablerb.AddForce(transform.right);
+		}
+	}
+	
+	 private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.name == "enemy1") {
+                enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1-= 1;
+				Destroy(PickableObject);
+    }
+     if (collision.gameObject.name == "enemy2") {
+            enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2-=1;
+			Destroy(PickableObject);
+    }
+ if (collision.gameObject.name == "enemy3_leper") {
+            enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3-=1;
+			Destroy(PickableObject);
+    }
+    }
+	
+	private void OnTriggerEnter2D(Collider2D col)
+	{
+		 if (col.gameObject.name == "enemy1_hitbox") {
+            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1-=1;
+			Destroy(PickableObject);
 		}
 	}
 }

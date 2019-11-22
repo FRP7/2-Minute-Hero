@@ -623,7 +623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201210665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.56, y: 0.05, z: 0.05}
+  m_LocalPosition: {x: -2.37, y: 0.05, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -665,6 +665,10 @@ MonoBehaviour:
   inventoryinstance: {fileID: 1978785253}
   throwablerb: {fileID: 201210670}
   Player: {fileID: 1978785249}
+  PickableObject: {fileID: 201210665}
+  enemyhealth1instance: {fileID: 1344750577}
+  enemyhealth2instance: {fileID: 778478626}
+  enemyhealth3instance: {fileID: 1719923105}
 --- !u!1 &242166798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1344750573
 BoxCollider2D:
   m_ObjectHideFlags: 0
