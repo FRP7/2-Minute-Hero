@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class enemy2chase : MonoBehaviour
 {
-   public float speed;
+
+    Animator myAnim;
+
+    public float speed;
    public float stoppingDistance;
 
     //flip
@@ -17,7 +20,9 @@ public class enemy2chase : MonoBehaviour
    
    void Start()
    {
-	target = GameObject.FindGameObjectWithTag("Player")
+        myAnim = GetComponent<Animator>(); 
+        
+        target = GameObject.FindGameObjectWithTag("Player")
 	.GetComponent<Transform>();
         //flip
         enemy1Scale = transform.localScale;
@@ -38,6 +43,7 @@ public class enemy2chase : MonoBehaviour
      transform.position = pos;
 
             //deve ser algures por aqui que deves meter a animação do robot a voar
+            myAnim.SetBool("isMoving", true);
 
         }
 

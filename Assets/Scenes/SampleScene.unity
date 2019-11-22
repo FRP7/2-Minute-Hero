@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 55909542}
   - component: {fileID: 55909541}
   - component: {fileID: 55909540}
+  - component: {fileID: 55909544}
   - component: {fileID: 55909539}
   - component: {fileID: 55909543}
   m_Layer: 0
@@ -257,6 +258,25 @@ MonoBehaviour:
   speed: 100
   fireRate: 1
   nextFire: 1
+--- !u!95 &55909544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55909537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d8d858a1e8a82f4b99fbc04e6b1c6fa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &85425553
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &201210666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -749,6 +769,7 @@ GameObject:
   - component: {fileID: 258663838}
   - component: {fileID: 258663837}
   - component: {fileID: 258663836}
+  - component: {fileID: 258663840}
   m_Layer: 0
   m_Name: enemy1_trigger
   m_TagString: enemy1_trigger
@@ -856,6 +877,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 258663834}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &258663840
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258663834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfa6eef675ec357499f8ef340b8589d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1163,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778478624}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6d8d858a1e8a82f4b99fbc04e6b1c6fa, type: 2}
   m_CullingMode: 0
@@ -1849,8 +1889,8 @@ GameObject:
   - component: {fileID: 1344750576}
   - component: {fileID: 1344750575}
   - component: {fileID: 1344750574}
-  - component: {fileID: 1344750573}
   - component: {fileID: 1344750578}
+  - component: {fileID: 1344750573}
   - component: {fileID: 1344750579}
   - component: {fileID: 1344750577}
   m_Layer: 0
@@ -1859,7 +1899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1344750573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3296,6 +3336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1978785249}
   - component: {fileID: 1978785248}
+  - component: {fileID: 1978785255}
   - component: {fileID: 1978785247}
   - component: {fileID: 1978785250}
   - component: {fileID: 1978785251}
@@ -3477,7 +3518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ispicked1: 0
   pickable1: {fileID: 201210665}
-  pickable1rb: {fileID: 201210670}
+  pickable1rb: {fileID: 0}
   Parent: {fileID: 947556478}
   force: 10
 --- !u!114 &1978785254
@@ -3494,3 +3535,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instanceWeapon: {fileID: 1666241343}
   hitbox: {fileID: 124845060}
+--- !u!95 &1978785255
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978785246}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb973805e5c1b1744be5b5a4a2be9d7a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

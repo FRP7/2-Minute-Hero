@@ -24,7 +24,7 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetMouseButton(1) && ispicked1 == true) {
             ispicked1 = false;
-            pickable1rb.AddForce(transform.up * force, ForceMode2D.Impulse);
+           // pickable1rb.AddForce(transform.up * force, ForceMode2D.Impulse);
             // pickable1rb.AddForce(new Vector2(0, 2), ForceMode2D.Impulse);
         }
     }

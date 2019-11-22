@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
+    Animator myAnim;
+    
     public GameObject instanceWeapon;
 	public GameObject hitbox;
     // Start is called before the first frame update
     void Start()
     {
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -19,9 +22,13 @@ public class PlayerCombat : MonoBehaviour
         {
             instanceWeapon.SetActive(true);
 			hitbox.SetActive(true);
+            myAnim.SetBool("isAttacking", true);
+
         } else {
+            
             instanceWeapon.SetActive(false);
 			hitbox.SetActive(false);
+            myAnim.SetBool("isAttacking", false);
         }
     }
 }

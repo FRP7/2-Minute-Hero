@@ -14,7 +14,9 @@ public class enemy1chase : MonoBehaviour
     //
    
    private Transform target;
-   
+
+    Animator myAnim;
+
    void Start()
    {
 	target = GameObject.FindGameObjectWithTag("Player")
@@ -23,7 +25,8 @@ public class enemy1chase : MonoBehaviour
         enemy1Scale = transform.localScale;
         enemy1ScaleX = enemy1Scale.x;
         direction = transform.position.x;
-        //
+
+        myAnim = GetComponent<Animator>();
    }
    
    void FixedUpdate()
@@ -37,7 +40,7 @@ public class enemy1chase : MonoBehaviour
      pos.y = 0;
      transform.position = pos;
 
-            //deve ser algures por aqui que deves meter a animação de andar
+            myAnim.SetBool("isMoving", true);
         }
 
         transform.localScale = enemy1Scale;
@@ -48,9 +51,11 @@ public class enemy1chase : MonoBehaviour
         if (direction > transform.position.x) {
            // Debug.Log("Esta a mover para a esquerda");
             enemy1Scale.x = enemy1ScaleX;
+            
         } else if(direction < transform.position.x) {
             //Debug.Log("Esta a mover para a direita");
             enemy1Scale.x = -enemy1ScaleX;
+
         }
         direction = transform.position.x;
         //

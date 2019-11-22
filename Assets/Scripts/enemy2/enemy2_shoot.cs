@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class enemy2_shoot : MonoBehaviour {
 
+    Animator myAnim;
+    
     //public Vector2 trigger1;
     public Transform trigger1;
 
@@ -19,6 +21,8 @@ public class enemy2_shoot : MonoBehaviour {
         // bullet.GetComponent<Rigidbody2D>();
         fireRate = 1f;
         nextFire = Time.time;
+
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -41,6 +45,9 @@ public class enemy2_shoot : MonoBehaviour {
             nextFire = Time.time + fireRate;
         }
         //deves meter algures por aqui a animação da arma do robot a disparar
+        myAnim.SetBool("isAttacking", true);
+        myAnim.SetBool("isCharging", true);
+        myAnim.SetBool("readyToShoot", true);
     }
 
 }
