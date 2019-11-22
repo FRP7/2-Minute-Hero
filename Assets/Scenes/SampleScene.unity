@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 201210667}
   - component: {fileID: 201210666}
   - component: {fileID: 201210670}
+  - component: {fileID: 201210671}
   m_Layer: 0
   m_Name: pickable1
   m_TagString: pickable
@@ -648,7 +649,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &201210671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201210665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b639f5e842586ec40be167b79823b1a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryinstance: {fileID: 1978785253}
+  throwablerb: {fileID: 201210670}
+  Player: {fileID: 1978785249}
 --- !u!1 &242166798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,6 +3537,8 @@ MonoBehaviour:
   pickable1rb: {fileID: 0}
   Parent: {fileID: 947556478}
   force: 10
+  isThrown: 0
+  throwableinstance1: {fileID: 0}
 --- !u!114 &1978785254
 MonoBehaviour:
   m_ObjectHideFlags: 0

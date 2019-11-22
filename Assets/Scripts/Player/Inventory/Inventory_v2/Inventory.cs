@@ -9,9 +9,12 @@ public class Inventory : MonoBehaviour
     public Rigidbody2D pickable1rb;
     public GameObject Parent;
     public float force;
+	public bool isThrown = false;
+	public ThrowableObject throwableinstance1;
 
     void Start() {
         pickable1rb = GetComponent<Rigidbody2D>();
+		throwableinstance1 = GameObject.FindWithTag("pickable").GetComponent<ThrowableObject>();
     }
 
      void Update() {
@@ -24,6 +27,8 @@ public class Inventory : MonoBehaviour
 
         if (Input.GetMouseButton(1) && ispicked1 == true) {
             ispicked1 = false;
+			isThrown = true;
+			throwableinstance1.Throw();
            // pickable1rb.AddForce(transform.up * force, ForceMode2D.Impulse);
             // pickable1rb.AddForce(new Vector2(0, 2), ForceMode2D.Impulse);
         }
