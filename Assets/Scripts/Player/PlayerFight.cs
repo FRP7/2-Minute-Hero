@@ -12,7 +12,7 @@ public class PlayerFight : MonoBehaviour
     {
         enemyhealth1instance = GameObject.Find("enemy1").GetComponent<EnemyHealth1>();
         enemyhealth2instance = GameObject.Find("enemy2").GetComponent<EnemyHealth2>();
-        enemyhealth3instance = GameObject.Find("enemy3_leper").GetComponent<EnemyHealth3>();
+        enemyhealth3instance = GameObject.Find("Leper").GetComponent<EnemyHealth3>();
     }
 
     // Update is called once per frame
