@@ -9,9 +9,10 @@ public class LeaperAI : MonoBehaviour
     public GameObject Leaper;
     public Rigidbody2D rb;
     public LeaperTrigger leapertriggerinstance;
+    public BoxCollider2D meleeCol;
+
     public float jumpForce;
     public bool addOnce = true;
-    public BoxCollider2D meleeCol;
 
     //Target player and shit
     public float speed;

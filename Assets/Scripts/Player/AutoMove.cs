@@ -23,12 +23,16 @@ public class AutoMove : MonoBehaviour
     public float checkRadius;
     public LayerMask isGround;
 
+    Animator myAnim;
+
     //flip
     Vector3 characterScale;
     float characterScaleX;
     //
 
     void Start() {
+        myAnim = GetComponent<Animator>();
+        
         //flip
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
@@ -85,10 +89,12 @@ public class AutoMove : MonoBehaviour
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimer -= Time.deltaTime;
                 //deve ser por aqui que deves meter a animação de estar no ar
+                myAnim.SetBool("isJumping", true);
             }
             else
             {
                 isJumping = false;
+                myAnim.SetBool("isJumping", false);
             }
             
         }
@@ -109,6 +115,7 @@ public class AutoMove : MonoBehaviour
         transform.Translate(Vector2.right * horizontalMove * Time.deltaTime);
 
         //acho que é por aqui que deves meter a animação de movimento
+        myAnim.SetBool("isMoving", true);
     }
 
     

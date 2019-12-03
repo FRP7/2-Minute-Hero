@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &85425554
 Transform:
   m_ObjectHideFlags: 0
@@ -987,7 +987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &778478625
 Animator:
   serializedVersion: 3
@@ -1379,7 +1379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1106261990
 Transform:
   m_ObjectHideFlags: 0
@@ -1644,7 +1644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1344750573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1943,8 +1943,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515762164}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.85, y: 0, z: 0}
-  m_LocalScale: {x: 0.83564997, y: 1, z: 1}
+  m_LocalPosition: {x: -0.6199999, y: 0, z: 0}
+  m_LocalScale: {x: 0.45, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1344750576}
   m_RootOrder: 0
@@ -2158,7 +2158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1576620986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2357,7 +2357,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1719923104
 Animator:
   serializedVersion: 3
@@ -3092,7 +3092,7 @@ PrefabInstance:
     - target: {fileID: 5543308299133764658, guid: fb78cec5d8771f243800b1b8f2b1cad0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.426237
+      value: -7.150345
       objectReference: {fileID: 0}
     - target: {fileID: 5543308299133764658, guid: fb78cec5d8771f243800b1b8f2b1cad0,
         type: 3}
@@ -3119,11 +3119,6 @@ PrefabInstance:
       propertyPath: m_AnimatedTarget
       value: 
       objectReference: {fileID: 1978785254}
-    - target: {fileID: 9171732191000505825, guid: fb78cec5d8771f243800b1b8f2b1cad0,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1978785249}
     - target: {fileID: 3485000703135749180, guid: fb78cec5d8771f243800b1b8f2b1cad0,
         type: 3}
       propertyPath: m_Follow
@@ -3134,6 +3129,11 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 682088723}
+    - target: {fileID: 9171732191000505825, guid: fb78cec5d8771f243800b1b8f2b1cad0,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1978785249}
     - target: {fileID: 124813298211875308, guid: fb78cec5d8771f243800b1b8f2b1cad0,
         type: 3}
       propertyPath: m_BoundingShape2D

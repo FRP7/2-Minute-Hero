@@ -9,6 +9,7 @@ public class enemy2_bullet : MonoBehaviour
     Rigidbody2D rb;
 
     public GameObject target;
+    public GameObject turretTarget;
     Vector2 moveDirection;
 
     public PlayerHealth playerinstance;
@@ -19,6 +20,7 @@ public class enemy2_bullet : MonoBehaviour
         playerinstance = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.Find("enemy2_trigger");
+        turretTarget = GameObject.Find("enemy2");
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         //se quiseres meter animação de bala a se destruir deves meter aqui
