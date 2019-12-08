@@ -25,14 +25,17 @@ public class AutoMove : MonoBehaviour
 
     Animator myAnim;
 
+    int _time = 1;
+
     //flip
     Vector3 characterScale;
     float characterScaleX;
     //
 
-    void Start() {
+    void Start()
+    {
         myAnim = GetComponent<Animator>();
-        
+
         //flip
         characterScale = transform.localScale;
         characterScaleX = characterScale.x;
@@ -58,48 +61,64 @@ public class AutoMove : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-           // Debug.Log("Beep");
+            // Debug.Log("Beep");
             direction = -1;
             characterScale.x = -characterScaleX; //flip
         }
 
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-          //  Debug.Log("Boop");
+            //  Debug.Log("Boop");
             direction = 1;
             characterScale.x = characterScaleX; //flip
         }
         transform.localScale = characterScale; //flip
 
         //Jump
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
-          //  Debug.Log("Jumpy jump");
+            //  Debug.Log("Jumpy jump");
             isJumping = true;
             jumpTimer = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
             //deve ser por aqui que deves meter a animação de saltar
         }
 
-        //Held Jump
-        if (isGrounded == true && Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) && isJumping == true)
+        if (isGrounded == false)
         {
-            if(jumpTimer > 0)
-            {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimer -= Time.deltaTime;
-                //deve ser por aqui que deves meter a animação de estar no ar
-                myAnim.SetBool("isJumping", true);
-            }
-            else
-            {
-                isJumping = false;
-                myAnim.SetBool("isJumping", false);
-            }
-            
+            isJumping = false;
         }
 
-        if(Input.GetKeyUp(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
+        ////Held Jump
+        //if (isGrounded == true && Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) && isGrounded == true)
+        //{
+        //    if(jumpTimer > 0)
+        //    {
+        //        rb.velocity = Vector2.up * jumpForce;
+        //        jumpTimer -= Time.deltaTime;
+        //        //deve ser por aqui que deves meter a animação de estar no ar
+        //        myAnim.SetBool("isJumping", true);
+        //    }
+        //    else
+        //    {
+        //        isJumping = false;
+        //        myAnim.SetBool("isJumping", false);
+        //    }
+
+        //}
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            _time = _time * -1;
+
+            if (_time == -1)
+                Time.timeScale = 0.3f;
+
+            if (_time == 1)
+                Time.timeScale = 1f;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow))
         {
             isJumping = false;
         }
@@ -118,7 +137,7 @@ public class AutoMove : MonoBehaviour
         myAnim.SetBool("isMoving", true);
     }
 
-    
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -14,6 +14,8 @@ public class LeaperAI : MonoBehaviour
     public float jumpForce;
     public bool addOnce = true;
 
+    public Animator leaperAnim;
+
     //Target player and shit
     public float speed;
     private Transform target;
@@ -22,6 +24,8 @@ public class LeaperAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        leaperAnim = GetComponent<Animator>();
+
         meleeCol.enabled = false;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -39,6 +43,8 @@ public class LeaperAI : MonoBehaviour
                 rb.AddForce(transform.up * jumpForce);
                 addOnce = false;
                 meleeCol.enabled = true;
+                leaperAnim.SetBool("isJumping", true);
+
                 Debug.Log("Leaper jump");
             }
         }
