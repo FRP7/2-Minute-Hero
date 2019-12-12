@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class EnemyHealth1 : MonoBehaviour
 {
-    public int EnemyHealthbar1;
-    public GameObject Enemy1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int EnemyHealthbar;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(EnemyHealthbar1 <= 0)
+        if(EnemyHealthbar <= 0)
         {
             Debug.Log("Enemy dies");
-            Destroy(Enemy1);
+            Destroy(this.gameObject);
         }
-		
-		//Debug.Log("Isto está a funcionar?");
     }
 }

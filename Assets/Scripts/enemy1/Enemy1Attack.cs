@@ -4,24 +4,9 @@ using UnityEngine;
 
 public class Enemy1Attack : MonoBehaviour
 {
-   // Start is called before the first frame update
-    public PlayerHealth playerinstance;
-	//public PlayerHealth playerinstance2;
-    void Start()
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        playerinstance = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-		//playerinstance2 = GameObject.FindWithTag("playerhealth").GetComponent<PlayerHealth>();
+        if (col.gameObject.tag == "Player")
+            col.gameObject.GetComponent<Health>().HP -= 1;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-      //  Debug.Log("Player: " + playerinstance.GetComponent<PlayerHealth>().Healthbar);
-    }
-	
-	private void OnTriggerEnter2D(Collider2D col)
-	{
-		if (col.gameObject.tag == "Player")
-            playerinstance.GetComponent<PlayerHealth>().Healthbar-=1;
-	}
 }

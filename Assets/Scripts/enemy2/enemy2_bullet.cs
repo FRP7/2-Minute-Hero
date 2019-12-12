@@ -4,43 +4,55 @@ using UnityEngine;
 
 public class enemy2_bullet : MonoBehaviour
 {
-    public float moveSpeed = 3f;
+    public float speed = 3f;
+    PlayerFight reflec;
 
     Rigidbody2D rb;
 
-    public GameObject target;
-    public GameObject turretTarget;
+    private Transform player;
+    public Transform drone;
+
+    private Vector2 target;
+    private Vector2 target1;
+
     Vector2 moveDirection;
 
-    public PlayerHealth playerinstance;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerinstance = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-        rb = GetComponent<Rigidbody2D>();
-        target = GameObject.Find("enemy2_trigger");
-        turretTarget = GameObject.Find("enemy2");
-        moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
-        rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        //se quiseres meter animação de bala a se destruir deves meter aqui
-        Destroy(gameObject, 1f);
-     //   Debug.Log("Destroy");
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        target = new Vector2(player.position.x, player.position.y);
+
+        target1 = new Vector2(drone.position.x, drone.position.y);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //se meteres alguma animação na bala (por exemplo, fogo a volta idk) deves meter aqui
+        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.gameObject.name == "Player") {
-            Debug.Log("Acertou!");
-            playerinstance.GetComponent<PlayerHealth>().Healthbar-=1;
-            //se quiseres meter animação da bala a destruir ao acertar no jogador deves mete aqui
-            Destroy(gameObject);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Hit");
+
+            collision.GetComponent<Health>().HP -= 1;
+
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "enemy" && reflec.isReflected == true)
+        {
+            Debug.Log("Hit");
+            collision.GetComponent<Health>().HP -= 1;
+
+            Destroy(this.gameObject);
         }
     }
-
 }

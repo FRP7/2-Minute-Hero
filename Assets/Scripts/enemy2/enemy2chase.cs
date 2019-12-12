@@ -14,7 +14,6 @@ public class enemy2chase : MonoBehaviour
     Vector3 enemy1Scale;
     float enemy1ScaleX;
     public float direction;
-    //
 
     private Transform target;
 
@@ -39,16 +38,14 @@ public class enemy2chase : MonoBehaviour
             (transform.position, target.position, speed * Time.deltaTime);
 
             Vector2 pos = transform.position;
-            pos.y = 3f;
+            pos.y = 15.63f;
             transform.position = pos;
 
             //deve ser algures por aqui que deves meter a animação do robot a voar
             myAnim.SetBool("isMoving", true);
 
         }
-
         transform.localScale = enemy1Scale;
-
     }
 
     void Update()

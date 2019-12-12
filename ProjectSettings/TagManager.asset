@@ -14,11 +14,11 @@ TagManager:
   - enemyleper
   - Floor
   - enemy2_trigger
-  - enemy2_bullet
   - enemy1_trigger
   - playerhealth
   - enemy1_hitbox
   - enemyWep
+  - Projectile
   layers:
   - Default
   - TransparentFX

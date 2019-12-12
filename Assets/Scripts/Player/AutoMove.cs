@@ -10,6 +10,9 @@ public class AutoMove : MonoBehaviour
 
     Rigidbody2D rb;
 
+    //Camera offset shit
+    public FollowPlayer follow;
+
     public float horizontalMove = 0f;
     public float jumpForce = 20f;
     [SerializeField]
@@ -28,8 +31,8 @@ public class AutoMove : MonoBehaviour
     int _time = 1;
 
     //flip
-    Vector3 characterScale;
-    float characterScaleX;
+    public Vector3 characterScale;
+    public float characterScaleX;
     //
 
     void Start()
@@ -64,6 +67,7 @@ public class AutoMove : MonoBehaviour
             // Debug.Log("Beep");
             direction = -1;
             characterScale.x = -characterScaleX; //flip
+            follow.offsetX = -0.25f;
         }
 
         else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
@@ -71,6 +75,7 @@ public class AutoMove : MonoBehaviour
             //  Debug.Log("Boop");
             direction = 1;
             characterScale.x = characterScaleX; //flip
+            follow.offsetX = 0.25f;
         }
         transform.localScale = characterScale; //flip
 
@@ -127,7 +132,7 @@ public class AutoMove : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, isGround);
     }
 
-    void Movement()
+    private void Movement()
     {
         //Auto movement
         horizontalMove = speed * direction;
@@ -145,5 +150,22 @@ public class AutoMove : MonoBehaviour
             direction = 1;
         if (collision.gameObject.tag == "Wall1")
             direction = -1;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            direction = 1;
+            characterScale.x = characterScaleX;
+        }
+            
+
+        if (collision.gameObject.tag == "Wall1")
+        {
+            direction = -1;
+            characterScale.x = -characterScaleX;
+        }
+            
     }
 }

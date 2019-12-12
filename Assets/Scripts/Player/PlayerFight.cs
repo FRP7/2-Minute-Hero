@@ -4,40 +4,47 @@ using UnityEngine;
 
 public class PlayerFight : MonoBehaviour
 {
-    public EnemyHealth1 enemyhealth1instance;
-    public EnemyHealth2 enemyhealth2instance;
-    public EnemyHealth3 enemyhealth3instance;
-    // Start is called before the first frame update
-    void Start()
-    {
-        enemyhealth1instance = GameObject.Find("Grunt").GetComponent<EnemyHealth1>();
-        enemyhealth2instance = GameObject.Find("Drone").GetComponent<EnemyHealth2>();
-        enemyhealth3instance = GameObject.Find("Leaper").GetComponent<EnemyHealth3>();
-    }
+    enemy2_bullet projectile;
+
+    //Bullet reflect stuff
+    public GameObject bullet;
+    public Transform bulletSpawn;
+
+
+    public bool isReflected = false;
+
+    //Cooldown time for the reflection
+    float reflectCooldown = 2f;
+    private float reflectCooldownTimer;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        //  Debug.Log("Enemy: " + enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1);
-        //  Debug.Log("Enemy: " + enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2);
-        //  Debug.Log("Enemy: " + enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3);
+        //Cooldown
+        if (reflectCooldownTimer > 0)
+            reflectCooldownTimer -= Time.deltaTime;
+
+        if (reflectCooldownTimer < 0)
+            reflectCooldownTimer = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Grunt")
-            enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1 -= 1;
+        //Do damage
+        if (collision.gameObject.tag == "enemy")
+        {
+            collision.gameObject.GetComponent<Health>().HP -= 1;
+            Debug.Log("Hit enemy");
+        }
+            
 
-        if (collision.gameObject.name == "Drone")
-            enemyhealth2instance.GetComponent<EnemyHealth2>().EnemyHealthbar2 -= 1;
-
-        if (collision.gameObject.name == "Leaper")
-            enemyhealth3instance.GetComponent<EnemyHealth3>().EnemyHealthbar3 -= 1;
+        //bullet
+        if (collision.gameObject.tag == "Projectile" && reflectCooldownTimer == 0)
+        {
+            Debug.Log("reflecting");
+            Destroy(collision.gameObject);
+            //Instantiate(bullet, bulletSpawn.position, Quaternion.identity);
+            //sparkles and shit when projectile returns to the drone
+        }
     }
-
-    //private void OnTriggerEnter2D(Collider2D col)
-    //{
-    //    if (col.gameObject.name == "enemy1_hitbox")
-    //        enemyhealth1instance.GetComponent<EnemyHealth1>().EnemyHealthbar1 -= 1;
-    //}
 }

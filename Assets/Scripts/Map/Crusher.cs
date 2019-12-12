@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Crusher : MonoBehaviour
 {
-    PlayerHealth playerHealth;
-    
-    [SerializeField] Transform pos1, pos2;
+    Health health;
+
     [SerializeField] float speed;
+    [SerializeField] Transform pos1, pos2;
     [SerializeField] Transform startPos;
 
-    [SerializeField] GameObject playerPrefab;
     //[SerializeField] GameObject enemies;
     //[SerializeField] BoxCollider2D killZone;
 
@@ -19,7 +18,6 @@ public class Crusher : MonoBehaviour
 
     void Start()
     {
-        playerHealth = GetComponent<PlayerHealth>();
         nextPos = startPos.position;
     }
 
@@ -45,7 +43,9 @@ public class Crusher : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(playerPrefab);
-        
+        if (collision.tag == "enemy" || collision.tag == "Player")
+        {
+            collision.GetComponent<Health>().HP -= 20;
+        }   
     }
 }

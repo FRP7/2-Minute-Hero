@@ -4,36 +4,27 @@ using UnityEngine;
 
 public class Warping : MonoBehaviour
 {
-    [SerializeField] GameObject warpEntrance;
-    [SerializeField] GameObject Player;
-    //[SerializeField] Camera theCam;
+    [SerializeField] private GameObject warpEntrance;
+    [SerializeField] private GameObject Player;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    GameObject cameraOffset;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            StartCoroutine( Warp() );
+            StartCoroutine( Warp());
         }
     }
 
     IEnumerator Warp()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.01f);
         
         Player.transform.position = new Vector2(warpEntrance.transform.position.x,
                 warpEntrance.transform.position.y);
 
         Camera.main.transform.position = new Vector3(0, -11, -5);
-
     }
 }
+    
