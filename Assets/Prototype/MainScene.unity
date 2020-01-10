@@ -8534,8 +8534,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   hands: {fileID: 947556478}
+  Player: {fileID: 1978785249}
   pickable: {fileID: 0}
   pickablerb: {fileID: 0}
+  throwable: {fileID: 0}
 --- !u!114 &1978785254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8713,6 +8715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b639f5e842586ec40be167b79823b1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!1 &969209397207312521
 GameObject:
   m_ObjectHideFlags: 0
@@ -8853,6 +8856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b639f5e842586ec40be167b79823b1a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
 --- !u!50 &969209397440367529
 Rigidbody2D:
   serializedVersion: 4

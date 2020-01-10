@@ -6,11 +6,11 @@ public class Inventory : MonoBehaviour
 {
     public int state;
     public GameObject hands;
+    public Transform Player;
 
     //pickable variables
     public GameObject pickable;
     public Rigidbody2D pickablerb;
-    public ThrowableObject throwable;
     //
 
 
@@ -43,10 +43,9 @@ public class Inventory : MonoBehaviour
             pickable.transform.parent = null;
             pickablerb.isKinematic = false;
             pickablerb.simulated = true;
-            throwable.Throw();
+            Throw();
             pickable = null;
             pickablerb = null;
-            throwable = null;
             state = 0;
         }
     }
@@ -56,7 +55,6 @@ public class Inventory : MonoBehaviour
             state = 1;
             pickable = collision.gameObject;
             SearchRigidBody();
-            SearchScript();
             Debug.Log("Pegou");
         }
     }
@@ -65,8 +63,14 @@ public class Inventory : MonoBehaviour
         pickablerb = pickable.GetComponent<Rigidbody2D>();
     }
 
-    public void SearchScript() {
-        throwable = pickable.GetComponent<ThrowableObject>();
+    public void Throw() {
+        if(Player.localScale.x < 1) 
+        {
+            pickablerb.AddForce(transform.right * -1);
+        } else if(Player.localScale.x > 0)
+        {
+            pickablerb.AddForce(transform.right);
+        }
     }
 
 }
