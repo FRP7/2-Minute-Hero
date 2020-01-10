@@ -4,36 +4,69 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    bool haveObject = false;
-    MeshRenderer holding;
+    public int state;
+    public GameObject hands;
 
-    [SerializeField]
-    private GameObject empty;
+    //pickable variables
+    public GameObject pickable;
+    public Rigidbody2D pickablerb;
+    public ThrowableObject throwable;
+    //
 
-    Rigidbody2D prefab;
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.tag == "pickable" && haveObject == false)
+    private void Awake() {
+        state = 0;
+    }
+
+    private void FixedUpdate() {
+        switch (state) {
+            case 1:
+                Debug.Log("Inventory cheio");
+                pickable.transform.SetParent(hands.transform);
+                pickable.transform.position = hands.transform.position;
+                pickablerb.isKinematic = true;
+                pickablerb.simulated = false;
+                break;
+            default:
+                Debug.Log("Inventory vazio");
+                /*pickable.transform.parent = null;
+                pickablerb.isKinematic = false;
+                pickablerb.simulated = true;
+                pickable = null;
+                pickablerb = null;*/
+                break;
+        }
+
+        if (Input.GetMouseButton(1))
         {
-            ThrowUpdate(col.GetComponent<Material>());
-            Destroy(col.gameObject);
+            //state = 0;
+            pickable.transform.parent = null;
+            pickablerb.isKinematic = false;
+            pickablerb.simulated = true;
+            throwable.Throw();
+            pickable = null;
+            pickablerb = null;
+            throwable = null;
+            state = 0;
         }
     }
 
-    private void ThrowUpdate(Material temp)
-    {
-        holding.material = temp;
-        haveObject = true;
-
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag == "pickable" && state == 0) {
+            state = 1;
+            pickable = collision.gameObject;
+            SearchRigidBody();
+            SearchScript();
+            Debug.Log("Pegou");
+        }
     }
 
-    private void Throw()
-    {
-        if(Input.GetMouseButtonDown(1) && haveObject == true)
-        {
-            Instantiate(prefab, transform.position, transform.rotation);
-            haveObject = false;
-        }  
+    public void SearchRigidBody() {
+        pickablerb = pickable.GetComponent<Rigidbody2D>();
     }
+
+    public void SearchScript() {
+        throwable = pickable.GetComponent<ThrowableObject>();
+    }
+
 }

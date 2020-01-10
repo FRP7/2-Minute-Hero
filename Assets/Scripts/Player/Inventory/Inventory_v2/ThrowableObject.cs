@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class ThrowableObject : MonoBehaviour
 {
-    public Inventory inv;
-
-    public float speed;
-
-
-    bool hit = false;
-
+    public Transform Player;
     public void Throw()
     {
-        
+        Debug.Log("Atirar");
     }
 
     private void OnTriggerEnter2D(Collider2D col)
