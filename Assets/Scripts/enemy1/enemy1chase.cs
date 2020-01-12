@@ -7,6 +7,11 @@ public class enemy1chase : MonoBehaviour
     public float speed;
     public float stoppingDistance;
 
+    //position
+    public float positionfloat;
+    public Transform position;
+    //
+
     //flip
     Vector3 enemy1Scale;
     float enemy1ScaleX;
@@ -27,17 +32,20 @@ public class enemy1chase : MonoBehaviour
         direction = transform.position.x;
 
         myAnim = GetComponent<Animator>();
+
+        position = gameObject.transform;
     }
 
     void FixedUpdate()
     {
+        positionfloat = position.position.y;
         if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards
             (transform.position, target.position, speed * Time.deltaTime);
 
             Vector2 pos = transform.position;
-            pos.y = 0;
+            pos.y = positionfloat;
             transform.position = pos;
 
             myAnim.SetBool("isMoving", true);

@@ -29,11 +29,6 @@ public class Inventory : MonoBehaviour
                 break;
             default:
                 Debug.Log("Inventory vazio");
-                /*pickable.transform.parent = null;
-                pickablerb.isKinematic = false;
-                pickablerb.simulated = true;
-                pickable = null;
-                pickablerb = null;*/
                 break;
         }
 
