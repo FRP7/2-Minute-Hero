@@ -25,6 +25,10 @@ public class enemy2_shoot : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
 
         myAnim = GetComponent<Animator>();
+
+        trigger = GameObject.Find("enemy2_trigger").GetComponent<enemy2_trigger>();
+        spawnPoint = GameObject.Find("Spawnpoint").transform;
+        //trigger = GetComponent<enemy2_trigger>();
     }
 
     private void FixedUpdate()
