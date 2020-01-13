@@ -8,7 +8,8 @@ public class ThrowableObject : MonoBehaviour
     {
         if (col.gameObject.tag == "enemy")
         {
-            col.gameObject.GetComponent<EnemyHealth1>().EnemyHealthbar -= 1;
+            Debug.Log("Acertou");
+            col.gameObject.GetComponent<Health>().HP -= 1;
             Destroy(this.gameObject);
         }
     }
