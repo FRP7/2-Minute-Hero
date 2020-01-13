@@ -4,36 +4,68 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    bool haveObject = false;
-    MeshRenderer holding;
+    public int state;
+    public GameObject hands;
+    public Transform Player;
 
-    [SerializeField]
-    private GameObject empty;
+    //pickable variables
+    public GameObject pickable;
+    public Rigidbody2D pickablerb;
+    //
 
-    Rigidbody2D prefab;
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.tag == "pickable" && haveObject == false)
+    private void Awake() {
+        state = 0;
+    }
+
+    private void FixedUpdate() {
+        switch (state) {
+            case 1:
+                Debug.Log("Inventory cheio");
+                pickable.transform.SetParent(hands.transform);
+                pickable.transform.position = hands.transform.position;
+                pickablerb.isKinematic = true;
+                pickablerb.simulated = false;
+                break;
+            default:
+                Debug.Log("Inventory vazio");
+                break;
+        }
+
+        if (Input.GetMouseButton(1))
         {
-            ThrowUpdate(col.GetComponent<Material>());
-            Destroy(col.gameObject);
+            //state = 0;
+            pickable.transform.parent = null;
+            pickablerb.isKinematic = false;
+            pickablerb.simulated = true;
+            Throw();
+            pickable = null;
+            pickablerb = null;
+            state = 0;
         }
     }
 
-    private void ThrowUpdate(Material temp)
-    {
-        holding.material = temp;
-        haveObject = true;
-
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag == "pickable" && state == 0) {
+            state = 1;
+            pickable = collision.gameObject;
+            SearchRigidBody();
+            Debug.Log("Pegou");
+        }
     }
 
-    private void Throw()
-    {
-        if(Input.GetMouseButtonDown(1) && haveObject == true)
+    public void SearchRigidBody() {
+        pickablerb = pickable.GetComponent<Rigidbody2D>();
+    }
+
+    public void Throw() {
+        if(Player.localScale.x < 1) 
         {
-            Instantiate(prefab, transform.position, transform.rotation);
-            haveObject = false;
-        }  
+            pickablerb.AddForce(transform.right * -1);
+        } else if(Player.localScale.x > 0)
+        {
+            pickablerb.AddForce(transform.right);
+        }
     }
+
 }

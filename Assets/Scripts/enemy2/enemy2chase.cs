@@ -10,6 +10,11 @@ public class enemy2chase : MonoBehaviour
     public float speed;
     public float stoppingDistance;
 
+    //position
+    public float positionfloat;
+    public Transform position;
+    //
+
     //flip
     Vector3 enemy1Scale;
     float enemy1ScaleX;
@@ -28,17 +33,20 @@ public class enemy2chase : MonoBehaviour
         enemy1ScaleX = enemy1Scale.x;
         direction = transform.position.x;
         //
+
+        position = gameObject.transform;
     }
 
     void FixedUpdate()
     {
+        positionfloat = position.position.y;
         if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
             transform.position = Vector2.MoveTowards
             (transform.position, target.position, speed * Time.deltaTime);
 
             Vector2 pos = transform.position;
-            pos.y = 15.63f;
+            pos.y = positionfloat;
             transform.position = pos;
 
             //deve ser algures por aqui que deves meter a animação do robot a voar
