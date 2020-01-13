@@ -93,7 +93,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 756cd79dd1a151c478ea3727f30b7773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerinstance: {fileID: 0}
 --- !u!95 &2257868261148916397
 Animator:
   serializedVersion: 3
@@ -125,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeea34a6c021ec40b3e0327b6a8f56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
   bullet: {fileID: 6632656627659118756, guid: 2c7faa341aeff6c41b2d08ec761b567b, type: 3}
   spawnPoint: {fileID: 0}
   speed: 100
@@ -274,6 +274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   stoppingDistance: 2
+  positionfloat: 0
+  position: {fileID: 0}
   direction: 0
 --- !u!114 &2257868261735219757
 MonoBehaviour:
@@ -430,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7528156332310011073}
   m_Layer: 10
-  m_Name: Spawnpoint
+  m_Name: Spawnpoint_drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

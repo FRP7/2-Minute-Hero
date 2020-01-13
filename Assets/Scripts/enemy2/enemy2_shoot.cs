@@ -27,7 +27,7 @@ public class enemy2_shoot : MonoBehaviour
         myAnim = GetComponent<Animator>();
 
         trigger = GameObject.Find("enemy2_trigger").GetComponent<enemy2_trigger>();
-        spawnPoint = GameObject.Find("Spawnpoint").transform;
+        spawnPoint = GameObject.Find("Spawnpoint_drone").transform;
         //trigger = GetComponent<enemy2_trigger>();
     }
 
