@@ -22,7 +22,7 @@ public class enemy2_bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drone = GameObject.Find("Drone(Clone)").transform;
+        //drone = GameObject.Find("Drone(Clone)").transform;
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
