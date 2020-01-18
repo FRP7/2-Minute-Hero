@@ -24,6 +24,7 @@ public class TeleportPlayer : MonoBehaviour
     public GameObject CameraPrefab;
     public GameObject Camera;
     public GameState CanRespawn;
+    public GameObject[] pickablesillusion;
     //
 
     //respawn dos inimigos
@@ -107,6 +108,8 @@ public class TeleportPlayer : MonoBehaviour
             case 1:
                 spawners[1].GetComponent<SpawnObjects>().once = false;
                 spawners[2].GetComponent<SpawnObjects>().once = false;
+                spawners[15].GetComponent<SpawnObjects>().once = false;
+                pickablesillusion[0].SetActive(true);
                 break;
             case 2:
                 spawners[3].GetComponent<SpawnObjects>().once = false;
