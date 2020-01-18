@@ -19,6 +19,7 @@ TagManager:
   - enemy1_hitbox
   - enemyWep
   - Projectile
+  - spawn
   layers:
   - Default
   - TransparentFX

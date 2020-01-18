@@ -15,6 +15,8 @@ public class TeleportPlayer : MonoBehaviour
     public Transform spawn6;
     public Transform spawn7;
     public Transform spawn8;
+    public Transform spawn9;
+    public Transform spawn10;
 
     // Update is called once per frame
     void Update()
@@ -52,6 +54,14 @@ public class TeleportPlayer : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha8)) {
             player.transform.position = spawn8.position;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9)) {
+            player.transform.position = spawn9.position;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha0)) {
+            player.transform.position = spawn10.position;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
