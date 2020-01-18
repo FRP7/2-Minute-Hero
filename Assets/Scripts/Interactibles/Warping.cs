@@ -9,6 +9,10 @@ public class Warping : MonoBehaviour
 
     GameObject cameraOffset;
 
+    private void Update() {
+        Player = GameObject.FindWithTag("Player");
+    }
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")

@@ -21,7 +21,7 @@ public class enemy1_trigger : MonoBehaviour
 	///liga e desliga arma, é aqui onde deve estar a animação do combate
 	void OnCollisionStay2D(Collision2D collision)
 	{
-		if(collision.gameObject.name == "Player")
+		if(collision.gameObject.tag == "Player")
 		{
 			//Debug.Log("Triga animation");
 			//AnimController.Play("enemy1_example");
@@ -32,7 +32,7 @@ public class enemy1_trigger : MonoBehaviour
 	}
 
     void OnCollisionExit2D(Collision2D other) {
-        if (other.gameObject.name == "Player") {
+        if (other.gameObject.tag == "Player") {
             
             DamageZone.SetActive(false);
 			enemy1_hitbox.SetActive(false);

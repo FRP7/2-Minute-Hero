@@ -17,15 +17,15 @@ public class enemy1chase : MonoBehaviour
     float enemy1ScaleX;
     public float direction;
     //
-
+    [SerializeField]
     private Transform target;
 
     Animator myAnim;
 
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player")
-        .GetComponent<Transform>();
+       /* target = GameObject.FindGameObjectWithTag("Player")
+        .GetComponent<Transform>();*/
         //flip
         enemy1Scale = transform.localScale;
         enemy1ScaleX = enemy1Scale.x;
@@ -56,6 +56,8 @@ public class enemy1chase : MonoBehaviour
 
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player")
+       .GetComponent<Transform>();
         //flip
         if (direction > transform.position.x)
         {

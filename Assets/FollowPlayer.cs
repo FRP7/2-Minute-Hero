@@ -15,7 +15,7 @@ public class FollowPlayer : MonoBehaviour
     public float offsetY;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 

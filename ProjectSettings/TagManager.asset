@@ -20,6 +20,7 @@ TagManager:
   - enemyWep
   - Projectile
   - spawn
+  - Camera
   layers:
   - Default
   - TransparentFX
