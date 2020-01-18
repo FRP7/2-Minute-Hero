@@ -344,7 +344,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: dfa6eef675ec357499f8ef340b8589d9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -393,6 +393,7 @@ MonoBehaviour:
   positionfloat: 0
   position: {fileID: 0}
   direction: 0
+  target: {fileID: 0}
 --- !u!114 &5730957649770433531
 MonoBehaviour:
   m_ObjectHideFlags: 0
