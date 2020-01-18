@@ -26,6 +26,11 @@ public class TeleportPlayer : MonoBehaviour
     public GameState CanRespawn;
     //
 
+    //respawn dos inimigos
+    public int levelstate;
+    public SpawnObjects[] spawners;
+    //
+
     // Update is called once per frame
     void FixedUpdate() {
         player = GameObject.FindWithTag("Player");
@@ -83,6 +88,54 @@ public class TeleportPlayer : MonoBehaviour
             Destroy(Camera);
             Instantiate(CameraPrefab, currentspawn);
             CanRespawn.GetComponent<GameState>().isDead = false;
+            DestroyEnemies();
+            RespawnEnemies();
+        }
+    }
+
+    public void DestroyEnemies() {
+        foreach(GameObject go in GameObject.FindGameObjectsWithTag("enemy")) {
+            Destroy(go);
+        }
+    }
+
+    public void RespawnEnemies() {
+        switch(levelstate) {
+            case 0:
+                spawners[0].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 1:
+                spawners[1].GetComponent<SpawnObjects>().once = false;
+                spawners[2].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 2:
+                spawners[3].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 3:
+                spawners[4].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 4:
+                spawners[5].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 5:
+                spawners[6].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 6:
+                spawners[7].GetComponent<SpawnObjects>().once = false;
+                spawners[8].GetComponent<SpawnObjects>().once = false;
+                spawners[9].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 7:
+                spawners[10].GetComponent<SpawnObjects>().once = false;
+                spawners[11].GetComponent<SpawnObjects>().once = false;
+                spawners[12].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 8:
+                spawners[8].GetComponent<SpawnObjects>().once = false;
+                break;
+            case 9:
+                spawners[9].GetComponent<SpawnObjects>().once = false;
+                break;
         }
     }
 }

@@ -2327,7 +2327,7 @@ GameObject:
   - component: {fileID: 500176618}
   - component: {fileID: 500176617}
   m_Layer: 0
-  m_Name: SpawnTrigger_4 (1)
+  m_Name: SpawnTrigger_6(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4948,7 +4948,7 @@ GameObject:
   - component: {fileID: 867407233}
   - component: {fileID: 867407232}
   m_Layer: 0
-  m_Name: SpawnTrigger_5 (1)
+  m_Name: SpawnTrigger_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6061,7 +6061,7 @@ GameObject:
   - component: {fileID: 1201955095}
   - component: {fileID: 1201955094}
   m_Layer: 0
-  m_Name: SpawnTrigger_1 (1)
+  m_Name: SpawnTrigger_1(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6196,6 +6196,23 @@ MonoBehaviour:
     type: 3}
   Camera: {fileID: 1153378061}
   CanRespawn: {fileID: 1879894712}
+  levelstate: 0
+  spawners:
+  - {fileID: 1917426400}
+  - {fileID: 504784691}
+  - {fileID: 1201955095}
+  - {fileID: 2109312988}
+  - {fileID: 514377581}
+  - {fileID: 242534705}
+  - {fileID: 1763008404}
+  - {fileID: 1809443897}
+  - {fileID: 500176618}
+  - {fileID: 1242161445}
+  - {fileID: 1497869593}
+  - {fileID: 867407233}
+  - {fileID: 2086410757}
+  - {fileID: 1911854392}
+  - {fileID: 1469511934}
 --- !u!1 &1218827981
 GameObject:
   m_ObjectHideFlags: 0
@@ -6585,7 +6602,7 @@ GameObject:
   - component: {fileID: 1242161445}
   - component: {fileID: 1242161444}
   m_Layer: 0
-  m_Name: SpawnTrigger_4 (2)
+  m_Name: SpawnTrigger_6(2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7889,7 +7906,7 @@ GameObject:
   - component: {fileID: 1469511934}
   - component: {fileID: 1469511933}
   m_Layer: 0
-  m_Name: SpawnTrigger
+  m_Name: SpawnTrigger_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8102,7 +8119,7 @@ GameObject:
   - component: {fileID: 1497869593}
   - component: {fileID: 1497869592}
   m_Layer: 0
-  m_Name: SpawnTrigger_5
+  m_Name: SpawnTrigger_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8734,7 +8751,7 @@ GameObject:
   - component: {fileID: 1660235526}
   - component: {fileID: 1660235527}
   m_Layer: 0
-  m_Name: 1st Floor
+  m_Name: 1st floor
   m_TagString: spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9016,7 +9033,7 @@ GameObject:
   - component: {fileID: 1763008404}
   - component: {fileID: 1763008403}
   m_Layer: 0
-  m_Name: SpawnTrigger_4
+  m_Name: SpawnTrigger_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9244,7 +9261,7 @@ GameObject:
   - component: {fileID: 1809443897}
   - component: {fileID: 1809443896}
   m_Layer: 0
-  m_Name: SpawnTrigger_4
+  m_Name: SpawnTrigger_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10045,7 +10062,7 @@ GameObject:
   - component: {fileID: 1911854392}
   - component: {fileID: 1911854391}
   m_Layer: 0
-  m_Name: SpawnTrigger
+  m_Name: SpawnTrigger_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10711,7 +10728,7 @@ GameObject:
   - component: {fileID: 2086410757}
   - component: {fileID: 2086410756}
   m_Layer: 0
-  m_Name: SpawnTrigger_5 (2)
+  m_Name: SpawnTrigger_7 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10923,12 +10940,12 @@ PrefabInstance:
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.12
+      value: 11.87
       objectReference: {fileID: 0}
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 144.82
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
