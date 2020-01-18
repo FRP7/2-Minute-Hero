@@ -138,6 +138,7 @@ public class TeleportPlayer : MonoBehaviour
                 break;
             case 8:
                 spawners[8].GetComponent<SpawnObjects>().once = false;
+                spawners[13].GetComponent<SpawnObjects>().once = false;
                 break;
             case 9:
                 spawners[9].GetComponent<SpawnObjects>().once = false;
