@@ -59,13 +59,13 @@ public class Inventory : MonoBehaviour
     }
 
     public void Throw() {
-        if(Player.localScale.x < 1) 
-        {
-            pickablerb.AddForce(transform.right * -1);
-        } else if(Player.localScale.x > 0)
-        {
-            pickablerb.AddForce(transform.right);
-        }
+         if(Player.localScale.x < 0) 
+         {
+             pickablerb.AddForce(transform.right * -1);
+         } else if(Player.localScale.x > 0)
+         {
+             pickablerb.AddForce(transform.right);
+         }
     }
 
 }
