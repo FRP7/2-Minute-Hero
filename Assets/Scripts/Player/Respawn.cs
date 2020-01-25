@@ -11,6 +11,9 @@ public class Respawn : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if(!collision.isTrigger) {
+            teleportinstance.CanClick = true;
+        }
         if (collision.gameObject.tag == "spawn") {
             teleportinstance.GetComponent<TeleportPlayer>().currentspawn = collision.transform;
         }
@@ -45,4 +48,4 @@ public class Respawn : MonoBehaviour
             teleportinstance.GetComponent<TeleportPlayer>().levelstate = 9;
         }
     }
-}
+    }

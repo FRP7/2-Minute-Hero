@@ -26,6 +26,7 @@ public class TeleportPlayer : MonoBehaviour
     public GameState CanRespawn;
     public GameObject[] pickablesillusion;
     public float SpawnSpeed = 5;
+    public bool CanClick = true;
     //
 
     //respawn dos inimigos
@@ -84,14 +85,15 @@ public class TeleportPlayer : MonoBehaviour
     }
 
     public void Respawn() {
-        if (Input.GetKeyDown(KeyCode.R) && CanRespawn.GetComponent<GameState>().isDead == true) {
+        if (Input.GetKeyDown(KeyCode.R) && CanRespawn.GetComponent<GameState>().isDead == true && CanClick == true) {
             //SceneManager.LoadScene("MainScene");
-            Instantiate(PlayerPrefab, currentspawn);
-            Destroy(Camera);
-            Instantiate(CameraPrefab, currentspawn);
-            CanRespawn.GetComponent<GameState>().isDead = false;
-            DestroyEnemies();
-            RespawnEnemies();
+                CanClick = false;
+                Instantiate(PlayerPrefab, currentspawn);
+                Destroy(Camera);
+                Instantiate(CameraPrefab, currentspawn);
+                CanRespawn.GetComponent<GameState>().isDead = false;
+                DestroyEnemies();
+                RespawnEnemies();
         }
     }
 
