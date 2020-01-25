@@ -19,15 +19,15 @@ public class enemy2_bullet : MonoBehaviour
     Vector2 moveDirection;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
+
         //drone = GameObject.Find("Drone(Clone)").transform;
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        target = new Vector2(trigger.position.x, trigger.position.y);
+        target = new Vector2(player.position.x, player.position.y);
 
         target1 = new Vector2(drone.position.x, drone.position.y);
 
