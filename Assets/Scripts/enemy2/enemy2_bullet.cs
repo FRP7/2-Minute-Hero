@@ -11,6 +11,7 @@ public class enemy2_bullet : MonoBehaviour
 
     private Transform player;
     public Transform drone;
+    public Transform trigger;
 
     private Vector2 target;
     private Vector2 target1;
@@ -26,16 +27,22 @@ public class enemy2_bullet : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        target = new Vector2(player.position.x, player.position.y);
+        target = new Vector2(trigger.position.x, trigger.position.y);
 
         target1 = new Vector2(drone.position.x, drone.position.y);
+
+        //trigger = GameObject.FindGameObjectWithTag("enemy2_trigger").transform;
 
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+    }
+
+    private void Update() {
+        trigger = GameObject.FindGameObjectWithTag("enemy2_trigger").transform;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
