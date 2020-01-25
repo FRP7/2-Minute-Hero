@@ -25,6 +25,7 @@ public class TeleportPlayer : MonoBehaviour
     public GameObject Camera;
     public GameState CanRespawn;
     public GameObject[] pickablesillusion;
+    public float SpawnSpeed = 5;
     //
 
     //respawn dos inimigos

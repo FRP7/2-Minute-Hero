@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5730957649570078064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.12, y: -1.96, z: 1.2074219}
+  m_LocalPosition: {x: -2.96, y: -1.7, z: 1.2074219}
   m_LocalScale: {x: 3.4712706, y: 0.1125, z: 1}
   m_Children: []
   m_Father: {fileID: 5730957649770433281}
@@ -155,7 +155,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5730957649570078064}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -276,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 5730957649770433528}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 28.62, y: 0.06, z: -2.1074219}
-  m_LocalScale: {x: 0.56049, y: 0.9842596, z: 1}
+  m_LocalScale: {x: 0.8131286, y: 1.1161199, z: 1}
   m_Children:
   - {fileID: 5730957650271384072}
   - {fileID: 5730957649570078067}
@@ -316,18 +316,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000166893, y: 0.012465835}
+  m_Offset: {x: -0.00000166893, y: 0.116167665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 5}
+    oldSize: {x: 3.4, y: 3.6}
     newSize: {x: 1.47, y: 1.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3642077, y: 3.8671372}
+  m_Size: {x: 3.3642077, y: 3.6597335}
   m_EdgeRadius: 0
 --- !u!114 &5730957649770433530
 MonoBehaviour:
@@ -373,18 +373,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0000034570694, y: 0.11965573}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 5}
+    oldSize: {x: 3.4, y: 3.6}
     newSize: {x: 1.47, y: 1.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.3650959, y: 3.632435}
   m_EdgeRadius: 0
 --- !u!212 &5724922880152807327
 SpriteRenderer:
@@ -424,7 +424,7 @@ SpriteRenderer:
   m_SortingLayerID: -1778850869
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60bfdb2e270cb5b40972a80b3878a45f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1553d7386bbf85544bfeda3ce417fd24, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 1
   m_FlipY: 0
