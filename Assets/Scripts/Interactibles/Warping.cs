@@ -6,6 +6,7 @@ public class Warping : MonoBehaviour
 {
     [SerializeField] private GameObject warpEntrance;
     [SerializeField] private GameObject Player;
+    [SerializeField] private TeleportPlayer teleportinstance;
 
     GameObject cameraOffset;
 
@@ -17,6 +18,7 @@ public class Warping : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            teleportinstance.GetComponent<TeleportPlayer>().DestroyEnemies();
             StartCoroutine( Warp());
         }
     }

@@ -644,6 +644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 690901599}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &106558322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2319,6 +2320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 1393017624}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &449720927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2471,6 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 1222735979}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &471085223
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3061,6 +3064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 1393017624}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &546322865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3213,6 +3217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 280984427}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &565844136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6427,6 +6432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 1576620985}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &1073336096
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10195,6 +10201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 228091875}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &1716586056
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10519,6 +10526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 879810860}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &1767122761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10795,6 +10803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 864703464}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &1816991496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11900,6 +11909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   warpEntrance: {fileID: 803403846}
   Player: {fileID: 1978785246}
+  teleportinstance: {fileID: 1212944891}
 --- !u!61 &1960487843
 BoxCollider2D:
   m_ObjectHideFlags: 0
