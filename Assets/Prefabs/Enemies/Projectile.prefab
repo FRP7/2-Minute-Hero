@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ae70aeb24eeea4cafcb2efb76ba8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
   drone: {fileID: 2257868261735219747, guid: 91ad328207e36fb4cafa9f966b1f0b82, type: 3}
   trigger: {fileID: 0}
 --- !u!212 &2395518923950280546

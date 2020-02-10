@@ -331,7 +331,7 @@ MonoBehaviour:
   bullet: {fileID: 6632656627659118756, guid: 2c7faa341aeff6c41b2d08ec761b567b, type: 3}
   spawnPoint: {fileID: 0}
   speed: 100
-  startTimeBtwShots: 1.5
+  startTimeBtwShots: 2
 --- !u!1 &5329012750284327460
 GameObject:
   m_ObjectHideFlags: 0

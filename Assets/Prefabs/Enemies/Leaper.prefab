@@ -255,7 +255,7 @@ MonoBehaviour:
   jumpForce: 100
   addOnce: 1
   leaperAnim: {fileID: 0}
-  speed: 10
+  speed: 8
 --- !u!114 &4454755642400109895
 MonoBehaviour:
   m_ObjectHideFlags: 0
