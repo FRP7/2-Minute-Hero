@@ -38,7 +38,7 @@ public class TeleportPlayer : MonoBehaviour
     void FixedUpdate() {
         player = GameObject.FindWithTag("Player");
         Camera = GameObject.FindWithTag("Camera");
-        QuickSpawn();
+        //QuickSpawn();
         Respawn();
     }
 
