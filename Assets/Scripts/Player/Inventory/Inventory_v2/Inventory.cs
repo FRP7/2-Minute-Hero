@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     public int state;
     public GameObject hands;
     public Transform Player;
+    public bool isPicked = false;
 
     //pickable variables
     public GameObject pickable;
@@ -26,13 +27,15 @@ public class Inventory : MonoBehaviour
                 pickable.transform.position = hands.transform.position;
                 pickablerb.isKinematic = true;
                 pickablerb.simulated = false;
+                isPicked = true;
                 break;
             default:
                 Debug.Log("Inventory vazio");
+                isPicked = false;
                 break;
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //state = 0;
             pickable.transform.parent = null;

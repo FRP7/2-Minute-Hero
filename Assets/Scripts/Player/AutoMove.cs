@@ -80,7 +80,7 @@ public class AutoMove : MonoBehaviour
         transform.localScale = characterScale; //flip
 
         //Jump
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
+       /* if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) || isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow))
         {
             //  Debug.Log("Jumpy jump");
             isJumping = true;
@@ -92,7 +92,7 @@ public class AutoMove : MonoBehaviour
         if (isGrounded == false)
         {
             isJumping = false;
-        }
+        }*/
 
         ////Held Jump
         //if (isGrounded == true && Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) && isGrounded == true)

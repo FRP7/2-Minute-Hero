@@ -8,17 +8,20 @@ public class PlayerCombat : MonoBehaviour
 
     public GameObject instanceWeapon;
     public GameObject hitbox;
+
+    public Inventory inventoryinstance;
     // Start is called before the first frame update
     void Start()
     {
         myAnim = GetComponent<Animator>();
+        inventoryinstance = GetComponent<Inventory>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Start anim
-        if (Input.GetMouseButtonDown(0) && myAnim.GetBool("isAttacking") == false)
+        if (Input.GetKeyDown(KeyCode.Space) && myAnim.GetBool("isAttacking") == false && inventoryinstance.isPicked == false)
         {
             myAnim.SetBool("isAttacking", true);
         }

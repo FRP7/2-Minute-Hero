@@ -10,7 +10,10 @@ public class GameState : MonoBehaviour
     private void Update() {
         if (healthinstance == null) {
             isDead = true;
-        } 
+        }
+        if (healthinstance != null) {
+            isDead = false;
+        }
     }
 
     private void LateUpdate() {
