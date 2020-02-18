@@ -21,18 +21,18 @@ public class enemy2_shoot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // bullet.GetComponent<Rigidbody2D>();
         timeBtwShots = startTimeBtwShots;
-
         myAnim = GetComponent<Animator>();
+    }
 
+    private void Update() {
         trigger = GameObject.Find("enemy2_trigger").GetComponent<enemy2_trigger>();
         spawnPoint = GameObject.Find("Spawnpoint_drone").transform;
-        //trigger = GetComponent<enemy2_trigger>();
     }
 
     private void FixedUpdate()
     {
+
         if (timeBtwShots <= 0 && trigger.canShoot == true)
         {
             Instantiate(bullet, spawnPoint.position, Quaternion.identity);

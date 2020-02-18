@@ -25,11 +25,11 @@ public class enemy2_bullet : MonoBehaviour
 
         //drone = GameObject.Find("Drone(Clone)").transform;
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        /*player = GameObject.FindGameObjectWithTag("Player").transform;
 
         target = new Vector2(player.position.x, player.position.y);
 
-        target1 = new Vector2(drone.position.x, drone.position.y);
+        target1 = new Vector2(drone.position.x, drone.position.y);*/
 
         //trigger = GameObject.FindGameObjectWithTag("enemy2_trigger").transform;
 
@@ -39,6 +39,12 @@ public class enemy2_bullet : MonoBehaviour
     void FixedUpdate()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        target = new Vector2(player.position.x, player.position.y);
+
+        target1 = new Vector2(drone.position.x, drone.position.y);
     }
 
     private void Update() {
