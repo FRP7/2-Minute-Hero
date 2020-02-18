@@ -1,0 +1,11 @@
+tutorial: 1 grunt
+1st floor: 2 grunts, 1 pickable
+2nd floor: 1 drone
+3rd floor: 1 drone, 1 grunt
+4th floor: 1 leaper
+5th floor: 1 grone
+6th floor: 2 grunt, 1 grone, 1 pickable
+7th floor: 1 leaper, 1 grunt, 1 drone, 1 pickable
+8th floor: 1 kangaroo
+9th floor: mr doom
+10th floor: computer

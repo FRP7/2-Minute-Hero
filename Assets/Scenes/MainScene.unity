@@ -4900,7 +4900,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b22784636b58e4ea0541b5325b397e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHealthbar: 0
 --- !u!114 &808886101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8018,7 +8017,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b22784636b58e4ea0541b5325b397e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHealthbar: 0
 --- !u!95 &1344750578
 Animator:
   serializedVersion: 3
@@ -12391,7 +12389,7 @@ PrefabInstance:
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.52
+      value: 43.92
       objectReference: {fileID: 0}
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
