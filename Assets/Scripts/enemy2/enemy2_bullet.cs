@@ -22,17 +22,6 @@ public class enemy2_bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //drone = GameObject.Find("Drone(Clone)").transform;
-
-        /*player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        target = new Vector2(player.position.x, player.position.y);
-
-        target1 = new Vector2(drone.position.x, drone.position.y);*/
-
-        //trigger = GameObject.FindGameObjectWithTag("enemy2_trigger").transform;
-
     }
 
     // Update is called once per frame
