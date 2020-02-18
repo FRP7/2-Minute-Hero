@@ -15,3 +15,8 @@ máquina 1: clica no botão, crusher esmaga
 máquina 2: clica no botão, electrefica
 máquina 3: clica no botão, robots viram-se uns contra os outros
 máquina 4: clica no botão, mão pega num robot
+trap: clica num botão, jogador anda para trás do tapete rolante
+semi trap: se bater num cano, sai ar quente que pode matar jogador ou robots
+semi trap: se bater num cano, sai fogo que pode matar jogador ou robots
+semi trap: se pisar uma determinada coisa, um crusher esmaga
+semi trap: se pisar uma determinada cena, aparece uma serra giratória
