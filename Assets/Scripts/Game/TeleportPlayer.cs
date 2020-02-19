@@ -101,6 +101,12 @@ public class TeleportPlayer : MonoBehaviour
         foreach(GameObject go in GameObject.FindGameObjectsWithTag("enemy")) {
             Destroy(go);
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("trap")) {
+            Destroy(go);
+        }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("pickable")) {
+            Destroy(go);
+        }
     }
 
     public void RespawnEnemies() {
@@ -112,6 +118,7 @@ public class TeleportPlayer : MonoBehaviour
                 spawners[1].GetComponent<SpawnObjects>().once = false;
                 spawners[2].GetComponent<SpawnObjects>().once = false;
                 spawners[15].GetComponent<SpawnObjects>().once = false;
+                spawners[19].GetComponent<SpawnObjects>().once = false;
                 pickablesillusion[0].SetActive(true);
                 break;
             case 2:
