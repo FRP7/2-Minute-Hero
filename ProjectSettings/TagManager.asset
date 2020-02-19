@@ -21,6 +21,7 @@ TagManager:
   - Projectile
   - spawn
   - Camera
+  - trap
   layers:
   - Default
   - TransparentFX
