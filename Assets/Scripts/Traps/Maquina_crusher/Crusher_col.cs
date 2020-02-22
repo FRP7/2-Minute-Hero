@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Crusher_col : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private bool damage = true;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        if (collision.gameObject.tag == "enemy" && damage == true)
+        {
+            collision.gameObject.GetComponent<Health>().HP -= 1;
+            damage = false;
+            Debug.Log("Crush");
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (collision.gameObject.tag == "Player" && damage == true)
+        {
+            collision.gameObject.GetComponent<Health>().HP -= 1;
+            damage = false;
+            Debug.Log("Crush");
+        }
     }
 }

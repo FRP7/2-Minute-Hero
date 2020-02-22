@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Crusher_button : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Crusher_STM crusherstminstance;
+    [SerializeField] private GameObject button_off;
+    [SerializeField] private GameObject button_on;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space))
+        {
+            crusherstminstance.GetComponent<Crusher_STM>();
+            crusherstminstance.states = Crusher_STM.States.down;
+            button_off.SetActive(false);
+            button_on.SetActive(true);
+        }
     }
 }

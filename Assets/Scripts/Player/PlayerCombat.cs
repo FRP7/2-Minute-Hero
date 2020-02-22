@@ -10,6 +10,8 @@ public class PlayerCombat : MonoBehaviour
     public GameObject hitbox;
 
     public Inventory inventoryinstance;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,8 @@ public class PlayerCombat : MonoBehaviour
     void Update()
     {
         //Start anim
-        if (Input.GetKeyDown(KeyCode.Space) && myAnim.GetBool("isAttacking") == false && inventoryinstance.isPicked == false)
+        if (Input.GetKeyDown(KeyCode.Space) && myAnim.GetBool("isAttacking") == false
+            && inventoryinstance.isPicked == false)
         {
             myAnim.SetBool("isAttacking", true);
         }

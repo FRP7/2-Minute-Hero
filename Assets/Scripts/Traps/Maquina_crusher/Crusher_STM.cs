@@ -28,7 +28,7 @@ public class Crusher_STM : MonoBehaviour
                 crusher.transform.position = down.transform.position;
                 break;
             default:
-                crusher.transform.position = down.transform.position;
+                crusher.transform.position = top.transform.position;
                 break;
         }
     }
