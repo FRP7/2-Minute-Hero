@@ -12360,6 +12360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthinstance: {fileID: 1978785252}
   isDead: 0
+  CantAttack: 0
 --- !u!4 &1879894713
 Transform:
   m_ObjectHideFlags: 0
@@ -12931,18 +12932,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 352791482503588049}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1978785249 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 352791480711591223, guid: 714e4f2558e066a41a19c21d15e1ca3c,
-    type: 3}
-  m_PrefabInstance: {fileID: 352791482503588049}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978785246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a738650cbe9f4042b229b78b1aed13e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1978785252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 352791480711591221, guid: 714e4f2558e066a41a19c21d15e1ca3c,
@@ -13567,12 +13556,12 @@ PrefabInstance:
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.91
+      value: 11.89
       objectReference: {fileID: 0}
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 63.81
+      value: 1.62
       objectReference: {fileID: 0}
     - target: {fileID: 352791480711591216, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
@@ -13619,11 +13608,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 352791480711591218, guid: 714e4f2558e066a41a19c21d15e1ca3c,
-        type: 3}
-      propertyPath: combatinstance
-      value: 
-      objectReference: {fileID: 1978785249}
     - target: {fileID: 352791480711591223, guid: 714e4f2558e066a41a19c21d15e1ca3c,
         type: 3}
       propertyPath: gamestateinstance
@@ -13634,21 +13618,6 @@ PrefabInstance:
       propertyPath: teleportinstance
       value: 
       objectReference: {fileID: 1212944891}
-    - target: {fileID: 352791480855860736, guid: 714e4f2558e066a41a19c21d15e1ca3c,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 352791480855860765, guid: 714e4f2558e066a41a19c21d15e1ca3c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 352791480873008110, guid: 714e4f2558e066a41a19c21d15e1ca3c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 714e4f2558e066a41a19c21d15e1ca3c, type: 3}
 --- !u!1001 &6374972536484091295

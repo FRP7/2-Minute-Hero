@@ -7,16 +7,22 @@ public class Inventory : MonoBehaviour
     public int state;
     public GameObject hands;
     public Transform Player;
-    public bool isPicked = false;
 
     //pickable variables
     public GameObject pickable;
     public Rigidbody2D pickablerb;
     //
 
+    [SerializeField] private GameState gamestateistance;
+
 
     private void Awake() {
         state = 0;
+    }
+
+    private void Update()
+    {
+        gamestateistance = GameObject.Find("GameManager").GetComponent<GameState>();
     }
 
     private void FixedUpdate() {
@@ -27,11 +33,11 @@ public class Inventory : MonoBehaviour
                 pickable.transform.position = hands.transform.position;
                 pickablerb.isKinematic = true;
                 pickablerb.simulated = false;
-                isPicked = true;
+                gamestateistance.CantAttack = true;
                 break;
             default:
                 Debug.Log("Inventory vazio");
-                isPicked = false;
+                gamestateistance.CantAttack = false;
                 break;
         }
 

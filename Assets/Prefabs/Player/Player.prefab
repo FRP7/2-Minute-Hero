@@ -329,6 +329,7 @@ MonoBehaviour:
   isPicked: 0
   pickable: {fileID: 0}
   pickablerb: {fileID: 0}
+  gamestateistance: {fileID: 0}
 --- !u!114 &352791480711591223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +345,7 @@ MonoBehaviour:
   instanceWeapon: {fileID: 352791480873008110}
   hitbox: {fileID: 352791480711591183}
   inventoryinstance: {fileID: 352791480711591220}
+  gamestateinstance: {fileID: 0}
 --- !u!114 &352791480711591221
 MonoBehaviour:
   m_ObjectHideFlags: 0

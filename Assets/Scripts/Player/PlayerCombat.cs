@@ -11,6 +11,8 @@ public class PlayerCombat : MonoBehaviour
 
     public Inventory inventoryinstance;
 
+    [SerializeField] private GameState gamestateinstance;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +24,10 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gamestateinstance = GameObject.Find("GameManager").GetComponent<GameState>();
         //Start anim
         if (Input.GetKeyDown(KeyCode.Space) && myAnim.GetBool("isAttacking") == false
-            && inventoryinstance.isPicked == false)
+            && gamestateinstance.CantAttack == false)
         {
             myAnim.SetBool("isAttacking", true);
         }

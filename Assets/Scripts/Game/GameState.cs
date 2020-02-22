@@ -6,6 +6,7 @@ public class GameState : MonoBehaviour
 {
     public Health healthinstance;
     public bool isDead = false;
+    public bool CantAttack = false;
 
     private void Update() {
         if (healthinstance == null) {
