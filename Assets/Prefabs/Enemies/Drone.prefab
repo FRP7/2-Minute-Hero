@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 2257868261735219751}
   - component: {fileID: 2693442196435133573}
   - component: {fileID: 770636579}
+  - component: {fileID: 2904377338435275628}
   m_Layer: 10
   m_Name: Drone
   m_TagString: enemy
@@ -452,6 +453,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2904377338435275628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2257868261735219749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cd79dd1a151c478ea3727f30b7773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2257868262227630104
 GameObject:
   m_ObjectHideFlags: 0

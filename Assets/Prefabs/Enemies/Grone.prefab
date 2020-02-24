@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2068614705257305411}
   - component: {fileID: 944766746014654735}
   - component: {fileID: 1364321472}
+  - component: {fileID: 2859253547427719658}
   m_Layer: 10
   m_Name: Grone
   m_TagString: enemy
@@ -203,6 +204,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2859253547427719658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885588908862095402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cd79dd1a151c478ea3727f30b7773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2764872283925032436
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,9 +340,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeea34a6c021ec40b3e0327b6a8f56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: {fileID: 0}
+  trigger: {fileID: 5976615206267925626}
   bullet: {fileID: 6632656627659118756, guid: 2c7faa341aeff6c41b2d08ec761b567b, type: 3}
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 1350209678186407309}
   speed: 100
   startTimeBtwShots: 2
 --- !u!1 &5329012750284327460
