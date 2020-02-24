@@ -140,6 +140,7 @@ public class TeleportPlayer : MonoBehaviour
                 spawners[8].GetComponent<SpawnObjects>().once = false;
                 spawners[9].GetComponent<SpawnObjects>().once = false;
                 spawners[17].GetComponent<SpawnObjects>().once = false;
+                spawners[21].GetComponent<SpawnObjects>().once = false;
                 pickablesillusion[1].SetActive(true);
                 break;
             case 7:
